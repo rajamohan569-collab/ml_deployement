@@ -13,14 +13,14 @@ st.title('Affected Population in Disasters')
 
 
 
-latitude = int(st.number_input('latitude',value=0))
-longitude = int(st.number_input('longitude',value=0))
-severity_level = int(st.number_input('severity_level',value=0))
-affected_population = st.number_input("Affected Population", min_value=0)
-estimated_economic_loss_usd   = int(st.number_input('estimated_economic_loss_usd',value=0))
-response_time_hours = int(st.number_input('response_time_hours',value=0))
-infrastructure_damage_index = int(st.number_input('infrastructure_damage_index',value=0))
-is_major_disaster = int(st.number_input('is_major_disaster',value=0))
+latitude = int(st.number_input('latitude',value=00.00))
+longitude = int(st.number_input('longitude',value=00.00))
+severity_level = int(st.number_input('severity_level',value=00.00))
+affected_population = st.number_input("Affected Population", min_value=00.00)
+estimated_economic_loss_usd   = int(st.number_input('estimated_economic_loss_usd',value=00.00))
+response_time_hours = int(st.number_input('response_time_hours',value=00.00))
+infrastructure_damage_index = int(st.number_input('infrastructure_damage_index',value=00.00))
+is_major_disaster = int(st.number_input('is_major_disaster',value=00.00))
 
 if st.button('affected_population % '):
 
@@ -38,4 +38,5 @@ if st.button('affected_population % '):
 
 
     result = model.predict(input_df)[0]
+
     st.success(f'affected_population % :{result:.2f}')
